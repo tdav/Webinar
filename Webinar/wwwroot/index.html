@@ -1,0 +1,113 @@
+<!DOCTYPE html><html><head><title>Портал дистанционного обучения</title><meta charset=utf-8><meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><meta http-equiv=Content-Language content=en><meta name=msapplication-TileColor content=#2d89ef><meta name=theme-color content=#4188c9><meta name=apple-mobile-web-app-status-bar-style content=black-translucent><meta name=apple-mobile-web-app-capable content=yes><meta name=mobile-web-app-capable content=yes><meta name=HandheldFriendly content=True><meta name=MobileOptimized content=320><link rel=icon href=./favicon.ico type=image/x-icon><link rel="shortcut icon" type=image/x-icon href=./favicon.ico><style>/* Loadder */
+
+    .loading-container {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      text-align: center;
+    }
+
+    .loading-container .loading-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      /*background-color: lightgray;*/
+      opacity: 0.5;
+      z-index: 9998;
+    }
+
+    .loading-container .loading {
+      z-index: 9999;
+      position: fixed;
+      display: inline-block;
+      background-color: #fff;
+      padding: 20px 50px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      left: 50%;
+      top: 50%;
+      -ms-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .loading-container .loading .loading-icon {
+      margin-bottom: 8px;
+    }
+
+
+
+    .orbit-spinner,
+    .orbit-spinner * {
+      box-sizing: border-box;
+    }
+
+    .orbit-spinner {
+      height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      perspective: 800px;
+    }
+
+    .orbit-spinner .orbit {
+      position: absolute;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .orbit-spinner .orbit:nth-child(1) {
+      left: 0%;
+      top: 0%;
+      animation: orbit-spinner-orbit-one-animation 1200ms linear infinite;
+      border-bottom: 3px solid #ff1d5e;
+    }
+
+    .orbit-spinner .orbit:nth-child(2) {
+      right: 0%;
+      top: 0%;
+      animation: orbit-spinner-orbit-two-animation 1200ms linear infinite;
+      border-right: 3px solid #ff1d5e;
+    }
+
+    .orbit-spinner .orbit:nth-child(3) {
+      right: 0%;
+      bottom: 0%;
+      animation: orbit-spinner-orbit-three-animation 1200ms linear infinite;
+      border-top: 3px solid #ff1d5e;
+    }
+
+    @keyframes orbit-spinner-orbit-one-animation {
+      0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes orbit-spinner-orbit-two-animation {
+      0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes orbit-spinner-orbit-three-animation {
+      0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+      }
+    }
+
+    /* Loadder */</style><link rel="shortcut icon" href=https://rtcmulticonnection.herokuapp.com/demos/logo.png><link rel=stylesheet href=https://rtcmulticonnection.herokuapp.com/demos/stylesheet.css><script src=https://rtcmulticonnection.herokuapp.com/demos/menu.js></script><script src=https://github.com/muaz-khan/RTCMultiConnection/releases/download/3.4.3/RTCMultiConnection.js></script><link href=/static/css/app.f3191ec028adeb074d2d7991e6c56a3c.css rel=stylesheet></head><body><div id=app><div class=loading-container><div class=loading-backdrop></div><div class=loading><div class=loading-icon><div class=orbit-spinner><div class=orbit></div><div class=orbit></div><div class=orbit></div></div></div></div></div></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.351e4be9a9b7b46b3831.js></script><script type=text/javascript src=/static/js/app.4bcbfdb9f3ea80334d22.js></script></body></html>

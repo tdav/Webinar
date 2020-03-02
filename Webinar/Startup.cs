@@ -15,6 +15,7 @@ using Webinar.Models.Utils;
 using Webinar.Repository;
 using Webinar.Utils;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using Webinar.Hubs;
 
 namespace Webinar
 {
@@ -56,6 +57,7 @@ namespace Webinar
                 .AddNewtonsoftJson()
                 .AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 
+            services.AddSignalR();
 
             services.AddSwaggerGen(c =>
             {
@@ -94,11 +96,6 @@ namespace Webinar
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RssDbContext dataContext)
         {
-            //  dataContext.Database.Migrate();
-
-            //  loggingBuilder.AddConsole();
-            // loggingBuilder.AddDebug();
-
             app.UseCors("AllowAllHeaders");
 
             if (env.IsDevelopment())
@@ -107,7 +104,7 @@ namespace Webinar
             }
 
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseAuthentication();
@@ -116,6 +113,7 @@ namespace Webinar
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<WebrtcSignalingHub>("/signaling");
             });
 
             app.UseSwagger();
