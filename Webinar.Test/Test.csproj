@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Syndication" Version="4.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RssSata.FeedLister\RssSata.FeedLister.csproj" />
+    <ProjectReference Include="..\RssSata.Models\RssSata.Models.csproj" />
+    <ProjectReference Include="..\RssSata.Repository\RssSata.Repository.csproj" />
+    <ProjectReference Include="..\RssSata.Utils\RssSata.Utils.csproj" />
+  </ItemGroup>
+</Project>

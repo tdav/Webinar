@@ -1,0 +1,38 @@
+
+server {
+        listen 80;
+
+        access_log /var/log/nginx/sata80.access.log;
+        error_log /var/log/nginx/sata80.error.log;
+
+        server_name sata.uz;
+        return 301 https://sata.uz$request_uri;
+}
+
+server {
+        listen 443 ssl http2;
+
+        server_name sata.uz;
+
+        add_header Strict-Transport-Security max-age=2592000;
+
+        # здесь обязательно указываем сертификаты
+        #ssl on;
+        ssl_certificate /etc/nginx/ssl/certificate.crt;
+        ssl_certificate_key /etc/nginx/ssl/private.key;
+
+        include /etc/nginx/expires.conf;
+
+        #access_log off;
+        access_log /var/log/nginx/sata.access.log;
+        error_log /var/log/nginx/sata.error.log;
+
+        root /var/www/main-site/html;
+
+        index index.html index.htm index.nginx-debian.html;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+

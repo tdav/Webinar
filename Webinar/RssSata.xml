@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RssSata</name>
+    </assembly>
+    <members>
+        <member name="T:RssSata.Controllers.UsersController">
+            <summary>
+            Фойдаланувчилар билан ишлаш
+            </summary>
+        </member>
+        <member name="M:RssSata.Controllers.UsersController.Authenticate(RssSata.Models.viAuthenticateModel)">
+            <summary>
+            Авторизация
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RssSata.Controllers.UsersController.GetAll">
+            <summary>
+            Хамма user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:RssSata.Controllers.ValuesController">
+            <summary>
+            Test
+            </summary>
+        </member>
+    </members>
+</doc>
