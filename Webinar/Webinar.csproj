@@ -1,66 +1,50 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <TargetFramework>net6</TargetFramework>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="3.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.1">
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
+    
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2">
+    
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="3.1.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.2" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore" Version="3.1.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="5.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="5.0.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
-
-    <PackageReference Include="DevExtreme.AspNet.Data" Version="2.5.1" />
-    <PackageReference Include="DevExtreme.AspNet.Core" Version="19.2.3" />
-
-    <PackageReference Include="ExtCore.Mvc" Version="5.1.0" />
-    <PackageReference Include="ExtCore.WebApplication" Version="5.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="6.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="6.4.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.23.1" />
+    <PackageReference Include="ExtCore.Mvc" Version="7.1.2" />
+    <PackageReference Include="ExtCore.WebApplication" Version="7.1.2" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Webinar.Core\Webinar.Core.csproj" />
     <ProjectReference Include="..\Webinar.Models\Webinar.Models.csproj" />
     <ProjectReference Include="..\Webinar.Repository\Webinar.Repository.csproj" />
     <ProjectReference Include="..\Webinar.Utils\Webinar.Utils.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Folder Include="Extensions\" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
-
 </Project>
